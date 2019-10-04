@@ -1,16 +1,24 @@
 package principal;
 
 public class Processo {
-
-	int id; // Process ID
-	int at; // Arrival Time
+	
+	int id; // ID do processo
+	int pr; // Prioridade
+	int at; // Tempo de Chegada
 	int bt; // Bash Time
-	int pr; // Priority
-	int ct; // Conclusion Time
-	int tat; // TurnAround Time
-	int wt; // Waiting Time
-	int et; // Execution Time
-	int qt; // Queue Time
+	int ct; // Tempo de Conclusão
+	int tat; // Tempo de Resposta
+	int wt; // Tempo de Espera
+	
+	public Processo(int id, int pr, int at, int bt, int ct, int tat, int wt) {
+		this.id = id;
+		this.pr = pr;
+		this.at = at;
+		this.bt = bt;
+		this.ct = ct;
+		this.tat = tat;
+		this.wt = wt;
+	}
 	
 	
 }

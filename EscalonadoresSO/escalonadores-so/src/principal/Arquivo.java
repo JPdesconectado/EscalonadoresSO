@@ -12,12 +12,21 @@ public class Arquivo {
 		FileReader arq = new FileReader("C:\\Users/Informatica/Documents/GitHub/EscalonadoresSO/EscalonadoresSO/txtsAqui/teste.txt");
 		BufferedReader lerArq = new BufferedReader(arq);
 		
-		String linha = lerArq.readLine();
-		Lista.nFilas(linha);
+		String line = lerArq.readLine();
+		int i = 0;
+		int j = Lista.FilasEProcessos(line);
+
+		while (i < j) {
+			line = lerArq.readLine();
+			i++;
+	}
 		
-		while (linha != null) {
-			System.out.println(linha);
-			linha = lerArq.readLine();
+		while (line != null && i == j) {
+			System.out.println(line);
+			line = lerArq.readLine();
+			
+			
+			Lista.adicionarLista(line);
 		}
 		
 		arq.close();
@@ -26,6 +35,6 @@ public class Arquivo {
 		System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 	}
 	
-	System.out.println();
+	Lista.imprimirLista();
 }
 }
