@@ -15,18 +15,35 @@ public class Arquivo {
 		String line = lerArq.readLine();
 		int i = 0;
 		int j = Lista.FilasEProcessos(line);
-
+		j = j *2;
+		int h = 1;
+		int quantum = 0;
+		String s;
 		while (i < j) {
 			line = lerArq.readLine();
+			String[]in = line.split(" ");
+			if (in.length == 1) {
+				s = in[0];
+			}else {
+				s = in[0];
+				quantum = Integer.parseInt(in[1]);
+			}
+			
+			
+			Lista.Algoritmo(s, quantum);
 			i++;
 	}
 		
-		while (line != null && i == j) {
-			System.out.println(line);
+
+		
+		while (h == 1) {
+			
 			line = lerArq.readLine();
-			
-			
+			if(line != null) {
 			Lista.adicionarLista(line);
+			}else {
+				h = 0;
+			}
 		}
 		
 		arq.close();
@@ -35,6 +52,6 @@ public class Arquivo {
 		System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 	}
 	
-	Lista.imprimirLista();
+	//Lista.imprimirLista();
 }
 }

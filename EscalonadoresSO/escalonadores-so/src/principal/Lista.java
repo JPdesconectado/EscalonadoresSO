@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Lista {
 	
-	int quantum;
+	static int quantum;
 	static int filas;
 	static int processos;
 	
-	static ArrayList<Processo> ReadyList;
+	static ArrayList<Processo> ReadyList = new ArrayList<Processo>();
 	
 	static int FilasEProcessos(String linha) {
 		String[]in = linha.split(" ");
@@ -19,6 +19,8 @@ public class Lista {
 	}
 	
 	static void adicionarLista(String linha) {
+				
+		if(!linha.isBlank()) {
 		String[]in = linha.split(" ");
 		int id = Integer.parseInt(in[0]);
 		int pr= Integer.parseInt(in[1]);
@@ -30,15 +32,20 @@ public class Lista {
 		Processo p = new Processo(id, pr, at, bt, ct, tat, wt);
 		ReadyList.add(p);
 		tat++;
+		System.out.println(linha);
+		}else {
+			System.out.println("Linha Vazia");
+		}
 		
+		
+			
 	}
+		
 	
-	void Algoritmo(String tipo, int quantumRR) {
+	static void Algoritmo(String tipo, int quantumRR) {
 		
 		if (tipo.equals("FCFS")) {
-			for (int i = 0; i < ReadyList.size(); i++) {
-				
-			}
+			System.out.println("FCFSSSSSS");
 			
 			// Criar esse algoritmo aqui
 			
@@ -46,13 +53,13 @@ public class Lista {
 		}
 		
 		if (tipo.equals("SJF")) {
-			// Criar esse outro algoritmo aqui
+			System.out.println("FJGSJSJHSW");
 			
 		}
 		
 		if (tipo.equals("RR")) {
 			quantum = quantumRR;
-			
+			System.out.println("Linha VADAEWR"+ quantum);
 			
 			
 		}
