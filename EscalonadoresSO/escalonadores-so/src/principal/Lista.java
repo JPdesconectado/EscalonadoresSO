@@ -45,7 +45,7 @@ public class Lista {
 	static void Algoritmo(String tipo, int quantumRR) {
 		
 		if (tipo.equals("FCFS")) {
-			System.out.println("FCFSSSSSS");
+			System.out.println("FCFS");
 			
 			// Criar esse algoritmo aqui
 			
@@ -53,13 +53,13 @@ public class Lista {
 		}
 		
 		if (tipo.equals("SJF")) {
-			System.out.println("FJGSJSJHSW");
+			System.out.println("SJF");
 			
 		}
 		
 		if (tipo.equals("RR")) {
 			quantum = quantumRR;
-			System.out.println("Linha VADAEWR"+ quantum);
+			System.out.println("RR: "+ quantum);
 			
 			
 		}
