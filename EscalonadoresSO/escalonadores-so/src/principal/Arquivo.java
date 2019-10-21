@@ -47,7 +47,7 @@ public class Arquivo {
 		}
 		
 		arq.close();
-		
+		Lista.FCFS();
 	} catch (IOException e) {
 		System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 	}
