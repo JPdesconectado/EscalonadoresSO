@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Escalonador {
 
 	
-	ArrayList <Lista> WaitingList;
-	ArrayList <Processo> FinishList;
+	static ArrayList <Processo> WaitingList = new ArrayList<Processo>();
+	static ArrayList <Processo> FinishList = new ArrayList<Processo>();
+
 }

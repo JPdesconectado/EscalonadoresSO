@@ -9,7 +9,7 @@ public class Arquivo {
 
 	public static void main(String[] args) {
 	try {
-		FileReader arq = new FileReader("C:\\Users/Informatica/Documents/GitHub/EscalonadoresSO/EscalonadoresSO/txtsAqui/teste.txt");
+		FileReader arq = new FileReader("../txtsAqui/teste.txt");
 		BufferedReader lerArq = new BufferedReader(arq);
 		
 		String line = lerArq.readLine();
@@ -30,7 +30,7 @@ public class Arquivo {
 			}
 			
 			
-			Lista.Algoritmo(s, quantum);
+			Lista.Filas(s, quantum);
 			i++;
 	}
 		
@@ -47,11 +47,9 @@ public class Arquivo {
 		}
 		
 		arq.close();
-		Lista.FCFS();
 	} catch (IOException e) {
 		System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
 	}
 	
-	//Lista.imprimirLista();
 }
 }
